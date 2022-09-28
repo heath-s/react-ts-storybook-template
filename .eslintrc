@@ -5,6 +5,32 @@
     "airbnb/hooks",
     "plugin:react/jsx-runtime"
   ],
+  "overrides": [
+    {
+      "files": "**/*.stories.{js,jsx,ts,tsx}",
+      "rules": {
+        "import/no-anonymous-default-export": "off",
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true
+          }
+        ],
+        "react/function-component-definition": [
+          "error",
+          {
+            "namedComponents": "arrow-function"
+          }
+        ],
+        "react/jsx-props-no-spreading": [
+          "error",
+          {
+            "custom": "ignore"
+          }
+        ]
+      }
+    }
+  ],
   "parserOptions": {
     "project": "./tsconfig.json"
   }
